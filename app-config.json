@@ -1,0 +1,272 @@
+{
+  "id": "mechanical",
+  "slug": "parametric-mechanical-keychain",
+  "title": "Parametric Mechanical Keychain",
+  "arabic": "مدالية ميكانيكية بارامترية",
+  "description": "Parametric mechanical keychains with symbols, fonts and original SCAD template | مداليات ميكانيكية بارامترية مع رموز وخطوط",
+  "generator": "mechanical.mjs",
+  "exportName": "generateMechanical",
+  "exe": "ParametricMechanicalKeychain",
+  "defaultText": "ALBERTO",
+  "scad": true,
+  "assets": [
+    "Bungee-Regular.ttf",
+    "Bungee-OFL.txt"
+  ],
+  "defaults": {
+    "project": "mechanical",
+    "text": "ALBERTO",
+    "mechanicalFont": "Bungee",
+    "eslabon_primer_elemento": true,
+    "mechanicalMode": "todo",
+    "baseColor": "#2E7D32",
+    "topColor": "#F5F5DC",
+    "tamano_letra": 10,
+    "altura_letra": 1,
+    "alto": 6,
+    "ancho": 12,
+    "largo": 15,
+    "diametro_agujero": 10,
+    "profundidad_agujero": 5.5,
+    "diametro": 2,
+    "espacio_entre_modelos": 1,
+    "diametro_externo_cilindro": 6,
+    "diametro_interno_cilindro": 3,
+    "altura_cilindro": 4,
+    "separacion_cilindro": 2,
+    "alto_soporte": 1,
+    "largo_soporte": 2,
+    "tamano_chaflan": 1
+  },
+  "fields": [
+    {
+      "key": "mechanicalFont",
+      "label": "الخط / Font",
+      "type": "select",
+      "options": [
+        [
+          "Bungee",
+          "Bungee"
+        ],
+        [
+          "Impact",
+          "Impact"
+        ],
+        [
+          "Arial Black",
+          "Arial Black"
+        ],
+        [
+          "Arial:style=Bold",
+          "Arial:style=Bold"
+        ],
+        [
+          "Tahoma:style=Bold",
+          "Tahoma:style=Bold"
+        ],
+        [
+          "Verdana:style=Bold",
+          "Verdana:style=Bold"
+        ],
+        [
+          "Courier New:style=Bold",
+          "Courier New:style=Bold"
+        ],
+        [
+          "Luckiest Guy",
+          "Luckiest Guy"
+        ],
+        [
+          "Comic Neue:style=Bold",
+          "Comic Neue:style=Bold"
+        ],
+        [
+          "Comic Sans MS:style=Bold",
+          "Comic Sans MS:style=Bold"
+        ],
+        [
+          "Trebuchet MS:style=Bold",
+          "Trebuchet MS:style=Bold"
+        ],
+        [
+          "Georgia:style=Bold",
+          "Georgia:style=Bold"
+        ],
+        [
+          "Times New Roman:style=Bold",
+          "Times New Roman:style=Bold"
+        ],
+        [
+          "Segoe UI:style=Bold",
+          "Segoe UI:style=Bold"
+        ],
+        [
+          "Bahnschrift:style=Bold",
+          "Bahnschrift:style=Bold"
+        ],
+        [
+          "Segoe UI Symbol",
+          "Segoe UI Symbol"
+        ]
+      ]
+    },
+    {
+      "key": "eslabon_primer_elemento",
+      "label": "وصلة أول قطعة / First link",
+      "type": "checkbox"
+    },
+    {
+      "key": "mechanicalMode",
+      "label": "الأجزاء / Parts",
+      "type": "select",
+      "options": [
+        [
+          "todo",
+          "كامل / Complete"
+        ],
+        [
+          "base",
+          "قاعدة / Base"
+        ],
+        [
+          "texto",
+          "نص / Text"
+        ]
+      ]
+    },
+    {
+      "key": "tamano_letra",
+      "label": "حجم الخط (mm)",
+      "type": "number",
+      "min": 3,
+      "max": 30,
+      "step": 0.5
+    },
+    {
+      "key": "altura_letra",
+      "label": "ارتفاع النص (+ بارز / − محفور) (mm)",
+      "type": "number",
+      "min": -12,
+      "max": 5,
+      "step": 0.1
+    },
+    {
+      "key": "alto",
+      "label": "سماكة القطعة Z (mm)",
+      "type": "number",
+      "min": 6,
+      "max": 12,
+      "step": 0.5
+    },
+    {
+      "key": "ancho",
+      "label": "عرض القطعة Y (mm)",
+      "type": "number",
+      "min": 6,
+      "max": 40,
+      "step": 0.5
+    },
+    {
+      "key": "largo",
+      "label": "طول القطعة X (mm)",
+      "type": "number",
+      "min": 5,
+      "max": 40,
+      "step": 0.5
+    },
+    {
+      "key": "diametro_agujero",
+      "label": "قطر تجويف المفصل (mm)",
+      "type": "number",
+      "min": 1,
+      "max": 30,
+      "step": 0.1
+    },
+    {
+      "key": "profundidad_agujero",
+      "label": "طول تجويف المفصل (mm)",
+      "type": "number",
+      "min": 1,
+      "max": 20,
+      "step": 0.1
+    },
+    {
+      "key": "diametro",
+      "label": "قطر محور المفصل (mm)",
+      "type": "number",
+      "min": 0.5,
+      "max": 8,
+      "step": 0.1
+    },
+    {
+      "key": "espacio_entre_modelos",
+      "label": "المسافة بين القطع (mm)",
+      "type": "number",
+      "min": 0.2,
+      "max": 5,
+      "step": 0.1
+    },
+    {
+      "key": "diametro_externo_cilindro",
+      "label": "قطر حلقة الوصلة الخارجي (mm)",
+      "type": "number",
+      "min": 2,
+      "max": 15,
+      "step": 0.1
+    },
+    {
+      "key": "diametro_interno_cilindro",
+      "label": "قطر حلقة الوصلة الداخلي (mm)",
+      "type": "number",
+      "min": 1,
+      "max": 12,
+      "step": 0.1
+    },
+    {
+      "key": "altura_cilindro",
+      "label": "عرض حلقة الوصلة (mm)",
+      "type": "number",
+      "min": 1,
+      "max": 15,
+      "step": 0.1
+    },
+    {
+      "key": "separacion_cilindro",
+      "label": "إزاحة الحلقة عن القطعة (mm)",
+      "type": "number",
+      "min": 0.5,
+      "max": 8,
+      "step": 0.1
+    },
+    {
+      "key": "alto_soporte",
+      "label": "سماكة دعامة الحلقة (mm)",
+      "type": "number",
+      "min": 0.4,
+      "max": 5,
+      "step": 0.1
+    },
+    {
+      "key": "largo_soporte",
+      "label": "طول دعامة الحلقة (mm)",
+      "type": "number",
+      "min": 0.5,
+      "max": 10,
+      "step": 0.1
+    },
+    {
+      "key": "tamano_chaflan",
+      "label": "شطفة طرف القطعة (mm)",
+      "type": "number",
+      "min": 0,
+      "max": 3,
+      "step": 0.1
+    }
+  ],
+  "samples": [
+    "A♥★",
+    "ALI",
+    "HOME"
+  ],
+  "note": "كل حرف أو رمز على قطعة. اختبر الخلوص عند تغيير المفاصل. بعض الخطوط والرموز تعتمد على خطوط Windows. / One element per link; validate joint clearance and system font availability."
+}

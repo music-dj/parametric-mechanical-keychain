@@ -1,0 +1,108 @@
+{
+  "ok": true,
+  "app": "parametric-mechanical-keychain",
+  "cases": [
+    {
+      "variation": {},
+      "dimensions": [
+        111,
+        12,
+        7
+      ],
+      "closed": true,
+      "parts": 2,
+      "stlBytes": 284684,
+      "threeMFBytes": 60250
+    },
+    {
+      "variation": {
+        "text": "A♥★",
+        "mechanicalFont": "Trebuchet MS:style=Bold"
+      },
+      "dimensions": [
+        47,
+        12,
+        7
+      ],
+      "closed": true,
+      "parts": 2,
+      "stlBytes": 103684,
+      "threeMFBytes": 24993
+    },
+    {
+      "variation": {
+        "text": "AB",
+        "altura_letra": -1
+      },
+      "dimensions": [
+        31,
+        12,
+        6
+      ],
+      "closed": true,
+      "parts": 1,
+      "stlBytes": 71084,
+      "threeMFBytes": 17846
+    },
+    {
+      "variation": {
+        "text": "AB",
+        "altura_letra": 0
+      },
+      "dimensions": [
+        31,
+        12,
+        6
+      ],
+      "closed": true,
+      "parts": 1,
+      "stlBytes": 45684,
+      "threeMFBytes": 11932
+    },
+    {
+      "variation": {
+        "text": "AB",
+        "mechanicalMode": "base"
+      },
+      "dimensions": [
+        31,
+        12,
+        6
+      ],
+      "closed": true,
+      "parts": 1,
+      "stlBytes": 45684,
+      "threeMFBytes": 11930
+    },
+    {
+      "variation": {
+        "text": "AB",
+        "mechanicalMode": "texto"
+      },
+      "dimensions": [
+        24.769999504089355,
+        9.999989986419678,
+        1
+      ],
+      "closed": true,
+      "parts": 1,
+      "stlBytes": 25684,
+      "threeMFBytes": 8154
+    },
+    {
+      "variation": {
+        "text": "ALI",
+        "eslabon_primer_elemento": false
+      },
+      "dimensions": [
+        45,
+        12,
+        7
+      ],
+      "closed": true,
+      "parts": 2,
+      "stlBytes": 90684,
+      "threeMFBytes": 21035
+    }
+  ]
+}

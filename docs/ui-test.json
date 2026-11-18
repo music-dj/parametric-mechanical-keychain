@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "app": "parametric-mechanical-keychain",
+  "initial": true,
+  "fields": true,
+  "changed": true,
+  "symbols": true,
+  "restored": true,
+  "exported": true,
+  "dimensions": [
+    111,
+    12,
+    7
+  ],
+  "parts": 2,
+  "otherProjectTabs": 0
+}

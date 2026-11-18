@@ -1,0 +1,32 @@
+{
+  "ok": true,
+  "source": "Keychain Studio 1.7.0-beta.1",
+  "configuration": {
+    "project": "mechanical",
+    "text": "ALBERTO",
+    "mechanicalFont": "Bungee",
+    "eslabon_primer_elemento": true,
+    "mechanicalMode": "todo",
+    "baseColor": "#2E7D32",
+    "topColor": "#F5F5DC",
+    "tamano_letra": 10,
+    "altura_letra": 1,
+    "alto": 6,
+    "ancho": 12,
+    "largo": 15,
+    "diametro_agujero": 10,
+    "profundidad_agujero": 5.5,
+    "diametro": 2,
+    "espacio_entre_modelos": 1,
+    "diametro_externo_cilindro": 6,
+    "diametro_interno_cilindro": 3,
+    "altura_cilindro": 4,
+    "separacion_cilindro": 2,
+    "alto_soporte": 1,
+    "largo_soporte": 2,
+    "tamano_chaflan": 1
+  },
+  "dimensionsIdentical": true,
+  "previewPartsSHA256": "ab55e70e228c79da741f0767c3cec15758e484d084e996358b1ff7c6efbb87f7",
+  "previewPartsIdentical": true
+}
