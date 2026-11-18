@@ -1,0 +1,11 @@
+{
+  "schema": "rust-anything/profile@1",
+  "language": "ts",
+  "command": [
+    "node",
+    "C:/Users/smart/Documents/Codex/2026-11-11/new-chat/work/mechanical-speed-baseline.mjs"
+  ],
+  "total_ms": 34898.152,
+  "repo_pct": 0,
+  "hot": []
+}

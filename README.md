@@ -10,6 +10,14 @@ Create an articulated block keychain with one character or symbol per link. Base
 
 ![Application interface](docs/app.png)
 
+## Performance in v1.1.0
+
+The original OpenSCAD geometry is preserved. The base and raised text render in parallel, and the existing Manifold engine unions them for STL instead of running a third full OpenSCAD render. Geometry caches ignore display colors and share concurrent identical requests. Rapid typing keeps only the active calculation and newest pending edit.
+
+Measured on the same Windows machine: ALBERTO **13.54 s → 4.08 s (3.31×)**; A♥★ **5.72 s → 2.12 s (2.70×)**. A cached color-only update took **0.17 ms in the generator**; the interface also has a 40 ms color debounce and drawing/IPC overhead. Engraving and base/text-only modes retain their original rendering path and are not claimed to have this speedup. Times depend on hardware and settings.
+
+Eight original cases have identical dimensions and preview meshes and **zero measured symmetric solid-volume difference**. Original geometry fixtures and cache/queue regression tests are included. See [measurements](docs/performance.json). rust-anything profiling found the bottleneck in the already compiled OpenSCAD process, so no JavaScript-to-Rust port was made or claimed.
+
 ## Windows quick start
 
 1. Download the Windows ZIP from [Releases](https://github.com/music-dj/parametric-mechanical-keychain/releases/latest).

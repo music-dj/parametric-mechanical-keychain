@@ -4,7 +4,7 @@ const config=require('./app-config.json');
 let current=null,request=0;
 app.setName(config.slug);
 app.whenReady().then(async()=>{
- const backend=await import('./'+config.generator),generate=backend[config.exportName];
+ const backend=await import('./'+config.generator),generate=require('./generation-queue.cjs')(backend[config.exportName]);
  const {encodeSTL,encode3MF}=await import('./exporters.mjs');
  const win=new BrowserWindow({title:config.title,width:1400,height:960,minWidth:1000,minHeight:700,backgroundColor:'#101820',webPreferences:{preload:path.join(__dirname,'preload.cjs'),contextIsolation:true,nodeIntegration:false,sandbox:true}});
  win.setMenuBarVisibility(false);win.webContents.setWindowOpenHandler(()=>({action:'deny'}));win.webContents.on('will-navigate',e=>e.preventDefault());
@@ -13,11 +13,11 @@ app.whenReady().then(async()=>{
   if(id===request)current=result;
   return {kind:config.id,text:result.text,parts:result.parts,dimensions:result.dimensions,settings:result.settings,warnings:result.warnings||[]};
  });
- const save=async(type,file)=>{if(!current||!['stl','3mf'].includes(type))throw Error('Generate a valid model first.');const model=current;await fs.writeFile(file,type==='stl'?encodeSTL(model):encode3MF(model));return file;};
+ const save=async(type,file,model=current)=>{if(!model||!['stl','3mf'].includes(type))throw Error('Generate a valid model first.');await fs.writeFile(file,type==='stl'?encodeSTL(model):encode3MF(model));return file;};
  ipcMain.handle('export',async(_,type)=>{
-  if(!current)throw Error('Generate a valid model first.');const filename=current.text.replace(/[<>:"/\\|?*]/g,'_');
+  if(!current)throw Error('Generate a valid model first.');const model=current,filename=model.text.replace(/[<>:"/\\|?*]/g,'_');
   const {canceled,filePath}=await dialog.showSaveDialog(win,{defaultPath:filename+'.'+type,filters:[{name:type.toUpperCase(),extensions:[type]}]});
-  return canceled?null:save(type,filePath);
+  return canceled?null:save(type,filePath,model);
  });
  const verify=process.argv.includes('--verify');
  if(verify)ipcMain.handle('verify-export',async()=>{

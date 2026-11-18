@@ -1,13 +1,13 @@
 {
   "name": "parametric-mechanical-keychain",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Parametric mechanical keychains with symbols, fonts and original SCAD template | مداليات ميكانيكية بارامترية مع رموز وخطوط",
   "main": "main.cjs",
   "type": "module",
   "license": "MIT",
   "scripts": {
     "start": "electron .",
-    "test": "node test.mjs && node exporters.test.mjs",
+    "test": "node queue.test.cjs && node test.mjs && node performance.test.mjs && node exporters.test.mjs",
     "test:ui": "electron . --verify",
     "build:windows": "node build.cjs"
   },

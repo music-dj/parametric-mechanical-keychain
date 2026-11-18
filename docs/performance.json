@@ -1,0 +1,125 @@
+{
+  "ok": true,
+  "report": [
+    {
+      "input": {
+        "text": "ALBERTO"
+      },
+      "oldMs": 13537.456400000001,
+      "newMs": 4084.964,
+      "speedup": 3.3139720203164584,
+      "partsIdentical": true,
+      "dimensionsIdentical": true,
+      "symmetricDifferenceMM3": 0,
+      "oldVolume": 7452.833043619416,
+      "newVolume": 7452.833043619416
+    },
+    {
+      "input": {
+        "text": "A♥★",
+        "mechanicalFont": "Trebuchet MS:style=Bold"
+      },
+      "oldMs": 5715.7117,
+      "newMs": 2118.113000000001,
+      "speedup": 2.698492337283231,
+      "partsIdentical": true,
+      "dimensionsIdentical": true,
+      "symmetricDifferenceMM3": 0,
+      "oldVolume": 3077.452880297862,
+      "newVolume": 3077.452880297862
+    },
+    {
+      "input": {
+        "text": "AB",
+        "altura_letra": -1
+      },
+      "oldMs": 2137.1189000000013,
+      "newMs": 2126.317600000002,
+      "speedup": 1.0050798149815432,
+      "partsIdentical": true,
+      "dimensionsIdentical": true,
+      "symmetricDifferenceMM3": 0,
+      "oldVolume": 1810.2294883204943,
+      "newVolume": 1810.2294883204943
+    },
+    {
+      "input": {
+        "text": "AB",
+        "altura_letra": 0
+      },
+      "oldMs": 1699.6596000000027,
+      "newMs": 1688.5555999999997,
+      "speedup": 1.0065760345706134,
+      "partsIdentical": true,
+      "dimensionsIdentical": true,
+      "symmetricDifferenceMM3": 0,
+      "oldVolume": 1949.1621339295784,
+      "newVolume": 1949.1621339295784
+    },
+    {
+      "input": {
+        "text": "AB",
+        "mechanicalMode": "base"
+      },
+      "oldMs": 1704.3217000000004,
+      "newMs": 1704.658899999995,
+      "speedup": 0.9998021891652374,
+      "partsIdentical": true,
+      "dimensionsIdentical": true,
+      "symmetricDifferenceMM3": 0,
+      "oldVolume": 1949.1621339295784,
+      "newVolume": 1949.1621339295784
+    },
+    {
+      "input": {
+        "text": "AB",
+        "mechanicalMode": "texto"
+      },
+      "oldMs": 343.6415999999954,
+      "newMs": 339.4899000000005,
+      "speedup": 1.0122292297944502,
+      "partsIdentical": true,
+      "dimensionsIdentical": true,
+      "symmetricDifferenceMM3": 0,
+      "oldVolume": 138.93274683153874,
+      "newVolume": 138.93274683153874
+    },
+    {
+      "input": {
+        "text": "ALI",
+        "eslabon_primer_elemento": false
+      },
+      "oldMs": 6149.831299999998,
+      "newMs": 2370.5898000000016,
+      "speedup": 2.5942199278846108,
+      "partsIdentical": true,
+      "dimensionsIdentical": true,
+      "symmetricDifferenceMM3": 0,
+      "oldVolume": 3120.1163066902564,
+      "newVolume": 3120.1163066902564
+    },
+    {
+      "input": {
+        "text": "TEST",
+        "alto": 8,
+        "ancho": 14,
+        "largo": 17,
+        "altura_letra": 2
+      },
+      "oldMs": 7449.925000000003,
+      "newMs": 2642.044799999996,
+      "speedup": 2.819757257711911,
+      "partsIdentical": true,
+      "dimensionsIdentical": true,
+      "symmetricDifferenceMM3": 0,
+      "oldVolume": 7536.7448804171445,
+      "newVolume": 7536.7448804171445
+    }
+  ],
+  "colorMs": 0.17030000000522705,
+  "interface": {
+    "rapidEdits": true,
+    "invalidInputRecovery": true,
+    "colorUpdateMS": 54.9
+  }
+}

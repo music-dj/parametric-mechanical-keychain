@@ -61,7 +61,7 @@ function sync(){
  $('text').dir=/\p{Script=Arabic}/u.test($('text').value)?'rtl':'ltr';
 }
 function enable(value){$('export3mf').disabled=!value;$('exportStl').disabled=!value;}
-function schedule(){sync();enable(false);clearTimeout(timer);timer=setTimeout(rebuild,config.scad?650:350);}
+function schedule(delay){++ticket;sync();enable(false);clearTimeout(timer);timer=setTimeout(rebuild,typeof delay==='number'?delay:650);}
 async function rebuild(){
  clearTimeout(timer);sync();const id=++ticket;busy=true;enable(false);$('busy').hidden=false;
  try{const result=await window.studio.generate(settings());if(id!==ticket)return;show(result);enable(true);}
@@ -70,7 +70,7 @@ async function rebuild(){
 }
 function defaults(){for(const [key,value]of Object.entries(config.defaults)){const field=$(key);if(!field)continue;if(field.type==='checkbox')field.checked=value;else field.value=value;}sync();}
 $('text').maxLength=config.id==='keychain'||config.id==='mechanical'?20:80;
-for(const id of ['text','baseColor','topColor'])$(id).addEventListener('input',schedule);
+for(const id of ['text','baseColor','topColor'])$(id).addEventListener('input',id==='text'?schedule:()=>schedule(40));
 $('defaults').onclick=()=>{defaults();rebuild();};$('iso').onclick=()=>fit();$('top').onclick=()=>fit('top');$('side').onclick=()=>fit('side');
 $('bend-control').hidden=config.id!=='keychain';$('bend').oninput=bend;
 for(const [id,type]of [['exportStl','stl'],['export3mf','3mf']])$(id).onclick=async()=>{try{const saved=await window.studio.export(type);if(saved)$('status').textContent='Saved / تم الحفظ: '+saved;}catch(e){$('status').textContent=e.message;}};

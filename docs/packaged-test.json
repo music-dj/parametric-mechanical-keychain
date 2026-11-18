@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "platform": "Windows x64",
+  "version": "1.1.0",
   "exe": "ParametricMechanicalKeychain.exe",
   "exitCode": 0,
   "bundledRuntimeOnly": true,
@@ -22,6 +22,6 @@
     "otherProjectTabs": 0
   },
   "executableSHA256": "207853646fd0553430706aee4d2ef1fac8a492cc32001dcec739598c89d8a492",
-  "stlSHA256": "e74b45d8896293061ce904b42b1ee0057451bb1571cda74e5168bc48b59d5902",
-  "threeMFSHA256": "506ec7e0af5db5816730699b4a847bd3e288aa5bb841db6882f4a7118acdc4ef"
+  "stlSHA256": "23f62eaa1ff6325ac86a9335393195a833713ba9215dc7fd72c209110d721cf2",
+  "threeMFSHA256": "34c7e37a9d6b221d913629940623f4dc0bc6eedfc0083a27f24c17c9c9bb40f6"
 }
